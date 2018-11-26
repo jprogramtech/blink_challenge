@@ -1,0 +1,9 @@
+export const GET_ERRORS = 'GET_ERRORS';
+export const SET_ERRORS = 'SET_ERRORS';
+export const SET_CURRENT_USER = 'SET_CURRENT_USER';
+export const SET_SEARCH_RESULT = 'SET_SEARCH_RESULT';
+export const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
+export const ADD_FAVORITE = 'ADD_FAVORITE';
+export const SET_FAVORITES = 'GET_FAVORITES';
+export const SET_LOADING = 'SET_LOADING';
+export const SET_SPOTIFY_LOADING = 'SET_SPOTIFY_LOADING';
