@@ -12,21 +12,27 @@ export const searchArtist = (search, offset, currentPage) => dispatch => {
         data = {};
       }
 
-      dispatch({
-        type: SET_SEARCH_RESULT,
-        payload: data,
+      let payload = {
+        data: data,
         search: search,
         pageOffset: currentPage,
         error: {}
+      };
+
+      dispatch({
+        type: SET_SEARCH_RESULT,
+        payload: payload
       });
     })
     .catch(err => {
       dispatch({
         type: SET_SEARCH_RESULT,
-        payload: {},
-        search: null,
-        pageOffset: currentPage,
-        error: { error: err.message }
+        payload: {
+          data: {},
+          search: null,
+          pageOffset: currentPage,
+          error: { error: err.message }
+        }
       });
     });
 };
@@ -41,9 +47,6 @@ export const setSpotifySearchLoading = () => dispatch => {
 export const clearSearchResults = () => dispatch => {
   dispatch({
     type: SET_SEARCH_RESULT,
-    payload: {},
-    search: null,
-    pageOffset: 0,
-    error: {}
+    payload: { data: {}, search: null, pageOffset: 0, error: {} }
   });
 };

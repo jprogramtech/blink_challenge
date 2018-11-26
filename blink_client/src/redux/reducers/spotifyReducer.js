@@ -13,11 +13,11 @@ export default function(state = initialState, action) {
     case SET_SEARCH_RESULT:
       return {
         ...state,
-        searchResults: action.payload,
-        search: action.search,
-        currentPage: action.pageOffset,
+        searchResults: action.payload.data,
+        search: action.payload.search,
+        currentPage: action.payload.pageOffset,
         loading: false,
-        error: action.error
+        error: action.payload.error
       };
 
     case SET_SPOTIFY_LOADING:

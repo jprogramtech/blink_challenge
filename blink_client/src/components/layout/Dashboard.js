@@ -87,6 +87,7 @@ class Dashboard extends Component {
   };
 
   nextPageChange = () => {
+    this.checkToken();
     this.setModalFalse();
     if (this.props.searchResults.artists.next) {
       let params = queryString.parse(this.props.searchResults.artists.next);
@@ -99,6 +100,7 @@ class Dashboard extends Component {
   };
 
   prevPageChange = e => {
+    this.checkToken();
     this.setModalFalse();
     if (this.props.currentPage > 1) {
       let params = queryString.parse(this.props.searchResults.artists.previous);
@@ -205,7 +207,7 @@ class Dashboard extends Component {
         key === 'populatrity'
       ) {
         return (
-          <li>
+          <li key={key}>
             {key.toUpperCase()} : {JSON.stringify(this.state.item[key])}
           </li>
         );
