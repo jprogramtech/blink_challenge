@@ -1,8 +1,8 @@
 ## Set up
 
 I'm currently running node version v10.3.0
-can be found by running 'node -v' in terminal
-if you run into any issues intalling dependencies
+This can be found by running 'node -v' in terminal
+If you run into any issues intalling dependencies
 try using a newer version of node.
 
 You will need to create a dev config file in
@@ -27,6 +27,8 @@ clientSecret: Secret issued by spotify
 
 You will need to create a devloper account
 at [https://developer.spotify.com/dashboard/login](https://developer.spotify.com/dashboard/login)
+
+production app can be found at [https://fierce-fjord-92913.herokuapp.com/](https://fierce-fjord-92913.herokuapp.com/)
 
 ## Available Scripts
 
